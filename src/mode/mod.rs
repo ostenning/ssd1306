@@ -5,6 +5,7 @@
 
 pub mod displaymode;
 pub mod graphics;
+pub mod memory;
 pub mod terminal;
 
 pub use self::{graphics::GraphicsMode, terminal::TerminalMode};

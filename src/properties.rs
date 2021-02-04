@@ -163,6 +163,12 @@ where
             .try_for_each(|c| self.iface.send_data(U8(&c)))
     }
 
+    /// Send all data to the display
+    /// This method is useful if using a circular DMA buffer and sending the entire payload
+    pub fn draw_all(&mut self, buffer: &[u8]) -> Result<(), DisplayError> {
+        self.iface.send_data(U8(&buffer))
+    }
+
     /// Get display dimensions, taking into account the current rotation of the display
     ///
     /// ```rust
