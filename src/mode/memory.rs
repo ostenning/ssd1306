@@ -119,11 +119,6 @@ where
     ///
     pub fn flush(&mut self) -> Result<(), DisplayError> {
         let result = self.properties.draw_all(&self.buffer);
-        // let result = self
-        //     .properties
-        //     .bounded_draw(&self.buffer, 128, (0, 0), (128, 64));
-
-        // self.clear();
         result
     }
 
